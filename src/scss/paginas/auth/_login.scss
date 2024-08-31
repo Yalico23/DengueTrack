@@ -1,0 +1,69 @@
+.login{
+    &__sign-in{
+        background-image: url('/build/img/loginv2.webp');
+    }
+    &__log-in{
+        background-image: url('/build/img/loginv3.webp');
+    }
+    &__olvide{
+        background-image: url('/build/img/loginv4.webp');
+    }
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__contenedor{
+        @include contenedor-sm;
+        background-color: rgba(0, 0, 1, 0.5);
+        padding: 3rem 8rem;
+        margin:  4rem 0;
+        border-radius: 3rem;
+        @include telefono{
+            padding: 3rem;
+        }
+    }
+    &__titulo{
+        text-align: center;
+        color: $blanco;
+        font-weight: $bold;
+    }
+    &__enlaces{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 2rem;
+        @include telefono{
+            display: block;
+        }
+        a{
+            color: darken($blanco, 50);
+            transition: .3s ease;
+            font-size: 1.4rem;
+            display: block;
+            &:hover{
+                color: $blanco;
+            }
+            &:nth-last-child(1){
+                text-align: right;
+                @include telefono{
+                    text-align: center;
+                }
+            }
+            @include telefono{
+                font-size: 1.6rem;
+                margin-top: 2rem;
+                text-align: center
+            }
+        }  
+    }
+}
+
+.formulario{
+    &__submit--login{
+        @include boton($azul, $blanco);
+        width: auto;
+        border-radius: 2rem;
+    }
+}

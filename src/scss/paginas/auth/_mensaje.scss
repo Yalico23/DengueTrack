@@ -1,0 +1,20 @@
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(60deg, rgba(0,53,97,.5) 0%, rgba(0,0,0,.5) 100%),url('/build/img/login.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    &__contenedor{
+        @include contenedor-sm;
+        color: $blanco;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 2rem;
+        margin: 3rem auto;
+        padding: 5rem 3rem;
+        h2{
+            margin: 0 0 3rem 0;
+        }
+    }
+}

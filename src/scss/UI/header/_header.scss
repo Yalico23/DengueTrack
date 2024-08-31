@@ -1,0 +1,83 @@
+.header {
+  min-height:30rem;
+  @include telefono{
+    height: auto;
+  }
+
+  background-image: url(../img/grafico.svg), url(../img/grafico.svg),
+    linear-gradient(to right, rgba($negro, 1), rgba($negro, 0.5)),
+    image-set(url(../img/header.webp) 1x, url(../img/header.jpg) 1x);
+
+  background-repeat: no-repeat;
+  background-size: 40rem , 40rem , cover , cover;
+  background-position: top left, bottom right, center center, center center;
+
+  &__logo {
+    @include texto-fluido(2rem,8rem);
+    @include texto-degradado($azul,$secundario);
+    @include telefono{
+        text-align: center
+    }
+  }
+
+  &__contenedor {
+    @include contenedor;
+  }
+
+  &__navegacion {
+    padding: 5rem 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    @include telefono {
+        justify-content: center;
+        flex-direction: column;
+        text-align: center
+    }
+  }
+  &__enlace {
+    @include enlace;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+  }
+  &__user{
+    all: unset;
+    color: $blanco;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: $bold;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+  }
+  &__texto{
+    font-size: 3rem; 
+    font-weight: $bold;
+    color: $blanco;
+    margin: 2rem 0;
+    text-transform: uppercase;
+    @include telefono{
+        text-align: center;
+    }
+    &--modalidad{
+        font-size: 2rem;
+    }
+  }
+  &__boton{
+    @include boton($secundario, $blanco);
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 2rem 0;
+
+    @include telefono{
+        display: block;
+    }
+  }
+  &__form{
+    display: flex;
+    justify-content: center
+  }
+  &__submit{
+    @extend .header__enlace;
+  }
+}

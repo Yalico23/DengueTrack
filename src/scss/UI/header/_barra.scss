@@ -1,0 +1,9 @@
+.barra{
+    background-color: $azul;
+    &__contenido{
+        @include contenedor;
+    }
+    &__logo{
+        @include logo;
+    }
+}

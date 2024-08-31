@@ -1,0 +1,36 @@
+.navegacion{
+    display: flex;
+    align-items: center;
+    padding:2rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    @include tablet{
+        flex-direction: column;
+        text-align: center;
+        @include grid(2,1rem);
+    }
+    
+    @include telefono{
+        flex-direction: column;
+        text-align: center;
+        @include grid(1,1.5rem);
+    }
+    &__enlace{
+        color: $blanco;
+        font-size: 1.8rem;
+        padding: 2rem;
+        font-weight: $black;
+        text-transform: uppercase;
+        transition: .3s ease;
+        white-space: nowrap;
+        &:hover,
+        &--fijo{
+            background-color: $blanco;
+            color: $azul;
+        }
+        @include telefono{
+            padding: 2rem;
+        }
+
+    }
+}

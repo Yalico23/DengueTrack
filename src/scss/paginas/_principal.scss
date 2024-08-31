@@ -1,0 +1,19 @@
+.principal{
+    background-color: darken($secundario,15);
+    &__contenedor{
+        @include contenedor;
+    }
+    &__iframe{
+        width: 85rem;
+        height: 70rem;
+        border: none;
+        background-color: $negro;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        @include telefono{
+            width: 100%;
+            height: 50rem;
+        }
+    }
+}
